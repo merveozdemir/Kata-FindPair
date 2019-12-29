@@ -23,9 +23,7 @@ public class MyGame extends VerticalLayout {
     private MyButton firstCurrentButton = null;
     private MyButton secondCurrentButton = null;
     private List<FontAwesome> iconList;
-    public Thread tmr_slider;
     Random rand = new Random();
-
 
     public MyGame(int columnSize, int rowSize) {
         this.rowSize = rowSize;
@@ -40,6 +38,7 @@ public class MyGame extends VerticalLayout {
 
         createMyButtons();
     }
+
 
     private List<FontAwesome> getIconList() {
         return iconList;
@@ -86,7 +85,6 @@ public class MyGame extends VerticalLayout {
                     public void buttonClick(Button.ClickEvent event) {
                         //    myButton.addStyleName(ValoTheme.BUTTON_DANGER);
                         myButton.setIcon((FontAwesome) myButton.getData());
-
                         getTwoButtons(myButton);
 
                     }
